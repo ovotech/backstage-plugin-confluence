@@ -40,8 +40,8 @@ The `Resource` should like like this:
 apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
-  name: company-confluence-sapces
-  description: List of all company Confluence spaces to Index
+  name: company-confluence-spaces
+  description: List of all company Confluence spaces to index
   annotations:
     ovo.com/confluence-spaces: 'Eng, Sales, Marketing, BizDev'
 spec:
