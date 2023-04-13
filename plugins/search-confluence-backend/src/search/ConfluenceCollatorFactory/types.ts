@@ -5,7 +5,7 @@ import { IndexableDocument } from '@backstage/plugin-search-common';
  *
  * @public
  */
-export const ANNOTATION_OVO_CONFLUENCE_SPACES = 'ovo.com/confluence-spaces';
+export const ATLASSIAN_CONFLUENCE_SPACES = 'atlassian.net/confluence-spaces';
 
 export type ConfluenceDocumentMetadata = {
   title: string;

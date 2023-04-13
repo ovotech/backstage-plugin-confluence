@@ -12,7 +12,7 @@ import {
   ConfluenceDocumentList,
   IndexableAncestorRef,
   IndexableConfluenceDocument,
-  ANNOTATION_OVO_CONFLUENCE_SPACES,
+  ATLASSIAN_CONFLUENCE_SPACES,
 } from './types';
 import { CATALOG_FILTER_EXISTS, CatalogApi } from '@backstage/catalog-client';
 
@@ -128,7 +128,7 @@ export class ConfluenceCollatorFactory implements DocumentCollatorFactory {
       this.logger.info(
         `Using Resources of type ${RESOURCE_TYPE_CONFLUENCE_SPACES} to index Confluence`,
       );
-      const confluenceSpacesKey = `metadata.annotations.${ANNOTATION_OVO_CONFLUENCE_SPACES}`;
+      const confluenceSpacesKey = `metadata.annotations.${ATLASSIAN_CONFLUENCE_SPACES}`;
 
       // Create a filter so we only get the Entities we want.
       const filter: Record<string, symbol | string> = {
@@ -149,9 +149,9 @@ export class ConfluenceCollatorFactory implements DocumentCollatorFactory {
       const spaces: Array<string> = [];
       confluenceSpaces.items.map(entity => {
         const annotation =
-          entity.metadata.annotations![ANNOTATION_OVO_CONFLUENCE_SPACES]!;
+          entity.metadata.annotations![ATLASSIAN_CONFLUENCE_SPACES]!;
         this.logger.debug(
-          `metadata.annotations.${ANNOTATION_OVO_CONFLUENCE_SPACES}: ${annotation}`,
+          `metadata.annotations.${ATLASSIAN_CONFLUENCE_SPACES}: ${annotation}`,
         );
         const spaceList: string[] = annotation
           .split(',')

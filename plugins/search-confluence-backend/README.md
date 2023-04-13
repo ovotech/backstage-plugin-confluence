@@ -43,7 +43,7 @@ metadata:
   name: company-confluence-spaces
   description: List of all company Confluence spaces to index
   annotations:
-    ovo.com/confluence-spaces: 'Eng, Sales, Marketing, BizDev'
+    atlassian.net/confluence-spaces: 'Eng, Sales, Marketing, BizDev'
 spec:
   type: confluence-spaces
   owner: my-team
