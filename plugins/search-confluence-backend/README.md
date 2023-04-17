@@ -33,6 +33,22 @@ confluence:
     password: ${CONFLUENCE_PASSWORD}
 ```
 
+It is also possible to use a `Resource` in the catalog to specify the `spaces` to index.
+The `Resource` should like like this:
+
+```yaml
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: company-confluence-spaces
+  description: List of all company Confluence spaces to index
+  annotations:
+    atlassian.net/confluence-spaces: 'Eng, Sales, Marketing, BizDev'
+spec:
+  type: confluence-spaces
+  owner: my-team
+```
+
 Enable Confluence documents indexing in the search engine:
 
 ```typescript
@@ -90,6 +106,23 @@ export default async function createPlugin({
   });
 }
 ```
+
+If you have decided to use the Catalog (`Resource`) to define the spaces to index then there is a small change to the
+initialisation code:
+
+```typescript
+...
+indexBuilder.addCollator({
+  schedule: halfHourSchedule,
+  factory: ConfluenceCollatorFactory.fromConfig(env.config, {
+    logger: env.logger,
+    catalogClient: new CatalogClient({ discoveryApi: env.discovery }),
+  }),
+});
+...
+```
+
+This will ensure the Catalog Client is specified - and it can then get the `Resources` of the specified type.
 
 ## License
 
