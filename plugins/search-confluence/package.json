@@ -15,8 +15,8 @@
   },
   "publishConfig": {
     "access": "public",
-    "main": "dist/index.esm.js",
-    "types": "dist/index.d.ts"
+    "main": "src/index.esm.js",
+    "types": "src/index.d.ts"
   },
   "backstage": {
     "role": "frontend-plugin"
