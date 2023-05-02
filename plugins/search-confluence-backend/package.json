@@ -15,8 +15,8 @@
   },
   "publishConfig": {
     "access": "public",
-    "main": "src/index.cjs.js",
-    "types": "src/index.d.ts"
+    "main": "dist/index.cjs.js",
+    "types": "dist/index.d.ts"
   },
   "backstage": {
     "role": "backend-plugin"
