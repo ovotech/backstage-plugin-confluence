@@ -2903,40 +2903,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@k-phoen/backstage-plugin-confluence-backend@workspace:plugins/search-confluence-backend":
-  version: 0.0.0-use.local
-  resolution: "@k-phoen/backstage-plugin-confluence-backend@workspace:plugins/search-confluence-backend"
-  dependencies:
-    "@backstage/catalog-client": ^1.4.1
-    "@backstage/cli": ^0.22.6
-    "@backstage/config": ^1.0.7
-    "@backstage/plugin-search-common": ^1.2.3
-    "@types/node-fetch": ^2.6.1
-    node-fetch: ^2.6.7
-    p-limit: ^3.1.0
-    winston: ^3.2.1
-  languageName: unknown
-  linkType: soft
-
-"@k-phoen/backstage-plugin-confluence@workspace:plugins/search-confluence":
-  version: 0.0.0-use.local
-  resolution: "@k-phoen/backstage-plugin-confluence@workspace:plugins/search-confluence"
-  dependencies:
-    "@backstage/cli": ^0.22.6
-    "@backstage/core-components": ^0.13.0
-    "@backstage/core-plugin-api": ^1.5.1
-    "@backstage/dev-utils": ^1.0.14
-    "@backstage/plugin-search-common": ^1.2.3
-    "@backstage/plugin-search-react": ^1.5.2
-    "@material-ui/core": ^4.12.2
-    "@testing-library/jest-dom": ^5.10.1
-    node-fetch: ^2.6.1
-  peerDependencies:
-    react: ^16.13.1 || ^17.0.0
-    react-dom: ^16.13.1 || ^17.0.0
-  languageName: unknown
-  linkType: soft
-
 "@leichtgewicht/ip-codec@npm:^2.0.1":
   version: 2.0.4
   resolution: "@leichtgewicht/ip-codec@npm:2.0.4"
@@ -3482,6 +3448,40 @@ __metadata:
   checksum: 3946ad67c4de8002061154228cb5a4a28ae24823038a5991c518cbceeb05f10feeb52800b1c72b923e2531ffbb2855ed7dcb0ad2f1f35d075e7f79d6157fc385
   languageName: node
   linkType: hard
+
+"@ovotech/backstage-plugin-confluence-backend@workspace:plugins/search-confluence-backend":
+  version: 0.0.0-use.local
+  resolution: "@ovotech/backstage-plugin-confluence-backend@workspace:plugins/search-confluence-backend"
+  dependencies:
+    "@backstage/catalog-client": ^1.4.1
+    "@backstage/cli": ^0.22.6
+    "@backstage/config": ^1.0.7
+    "@backstage/plugin-search-common": ^1.2.3
+    "@types/node-fetch": ^2.6.1
+    node-fetch: ^2.6.7
+    p-limit: ^3.1.0
+    winston: ^3.2.1
+  languageName: unknown
+  linkType: soft
+
+"@ovotech/backstage-plugin-confluence@workspace:plugins/search-confluence":
+  version: 0.0.0-use.local
+  resolution: "@ovotech/backstage-plugin-confluence@workspace:plugins/search-confluence"
+  dependencies:
+    "@backstage/cli": ^0.22.6
+    "@backstage/core-components": ^0.13.0
+    "@backstage/core-plugin-api": ^1.5.1
+    "@backstage/dev-utils": ^1.0.14
+    "@backstage/plugin-search-common": ^1.2.3
+    "@backstage/plugin-search-react": ^1.5.2
+    "@material-ui/core": ^4.12.2
+    "@testing-library/jest-dom": ^5.10.1
+    node-fetch: ^2.6.1
+  peerDependencies:
+    react: ^16.13.1 || ^17.0.0
+    react-dom: ^16.13.1 || ^17.0.0
+  languageName: unknown
+  linkType: soft
 
 "@pmmmwh/react-refresh-webpack-plugin@npm:^0.5.7":
   version: 0.5.9
